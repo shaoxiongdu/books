@@ -42,20 +42,12 @@
 </div>
 
 <div style="text-align: center;width: 1200px">
-	<c:if test="${empty sessionScope.cart.items}">
-		<%--购物车为空的输出--%>
-		<span></span>
-		<div>
-			<span style="color: red">当前购物车为空</span>
-		</div>
-	</c:if>
-	<c:if test="${not empty sessionScope.cart.items}">
-		<%--购物车非空的输出--%>
+
 		<span>您的购物车中有【<span style="color: red;font-size: 25px"> ${sessionScope.cart.totalCount}</span>】件商品</span>
 		<div>
 			您刚刚将【<span style="color: red;font-size: 25px">${sessionScope.lastName}</span>】加入到了购物车中
 		</div>
-	</c:if>
+
 </div>
 	<div id="main">
 		<div id="book" style="display: flex;flex-wrap: wrap">

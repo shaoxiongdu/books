@@ -19,7 +19,7 @@
 	<table style="width: 800px">
 		<tr>
 			<th>订单号</th>
-			<th>日期</th>
+			<th style="width: 500px">日期</th>
 			<th>金额</th>
 			<th>状态</th>
 			<th>详情</th>
@@ -28,7 +28,7 @@
 		<c:forEach items="${requestScope.orderList}" var="order">
 			<tr>
 				<td style="width: 300px">${order.orderId}</td>
-				<td><fmt:formatDate value="${order.createTime}" pattern="yyyy年MM月dd日 HH时mm分ss秒"/></td>
+				<td style="width: 500px"><fmt:formatDate value="${order.createTime}" pattern="yyyy-MM-dd HH:mm:ss"/></td>
 				<td>${order.price}元</td>
 				<td>${order.status}</td>
 				<td><a href="orderServlet?action=showOrderDetails&orderId=${order.orderId}">查看详情</a></td>

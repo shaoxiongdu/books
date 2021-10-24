@@ -9,16 +9,6 @@
 	<%@  include file="/pages/common/head.jsp"%>
 	<script type="text/javascript">
 
-		$(function (){
-			$("button.deleteBtn").click(function () {
-
-				let bookId = $(this).attr("bookId");
-
-				location.href = "${requestScope.basePath}cartServlet?action=deleteItem&bookId=" + bookId;
-
-			});
-		})
-
 	</script>
 </head>
 <body>
@@ -30,7 +20,7 @@
 	<form action="orderServlet?action=createOrder">
 		<table>
 			<tr>
-				<th>商品名称</th>
+				<th style="width: 500px">商品名称</th>
 				<th>数量</th>
 				<th>单价</th>
 				<th>金额</th>
@@ -38,11 +28,11 @@
 			</tr>
 			<c:forEach items="${sessionScope.cart.items}" var="cartItem">
 				<tr>
-					<td>${cartItem.value.name}</td>
+					<td style="width: 500px">${cartItem.value.name}</td>
 					<td>${cartItem.value.count}</td>
 					<td>${cartItem.value.price}</td>
 					<td>${cartItem.value.totalPrice}</td>
-					<td> <button class="deleteBtn" bookId="${cartItem.value.id}">删除</button> </td>
+					<td> <a href="${requestScope.basePath}cartServlet?action=deleteItem&bookId="+${cartItem.value.id}>删除</a> </td>
 				</tr>
 			</c:forEach>
 		</table>
