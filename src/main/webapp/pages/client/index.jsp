@@ -58,20 +58,23 @@
 					</div>
 					<div class="book_info">
 						<div class="book_name" style="margin-top: 10px">
-							<h4 class="sp2">${book.name}</h4>
+							<h4 style="color: green" class="sp2">《${book.name}》</h4>
 						</div>
 						<div class="book_author" style="margin-top: 10px">
 							<h4>
-								<span class="sp2">${book.author}</span>&nbsp;
+								<span class="sp2">(${book.author})</span>&nbsp;
+							</h4>
+						</div>
+						<div>
+							<h4>
 								<span class="sp2" style="color: red">${book.price}元</span>&nbsp;
 							</h4>
-
 						</div>
 
 						<div class="book_sales" style="margin-top: 10px">
 							<h4>
 								<span class="sp1">销量:</span>
-								<span class="sp2">${book.sales}</span>&nbsp;
+								<span class="sp2">${book.sales}本</span>&nbsp;
 
 							</h4>
 
@@ -79,7 +82,7 @@
 						<div class="book_sales" style="margin-top: 10px">
 							<h4>
 								<span class="sp1">库存:</span>
-								<span class="sp2">${book.stock}</span>
+								<span class="sp2">${book.stock}本</span>
 							</h4>
 
 						</div>
@@ -97,7 +100,7 @@
 
 <div id="page_nav">
 	<c:if test="${requestScope.page.pageNo>1}">
-		<a href="clientServlet?action=page&pageNo=1&pageSize=10">首页</a>&nbsp;
+		<a href="clientServlet?action=page&pageNo=1">首页</a>&nbsp;
 		<a href="clientServlet?action=page&pageNo=${requestScope.page.pageNo-1}">上一页</a>&nbsp;
 	</c:if>
 	【当前第 <span>${requestScope.page.pageNo}</span>页,共<span>${requestScope.page.totalPageNo}</span>页,<span>${requestScope.page.totalCount}</span>条记录】

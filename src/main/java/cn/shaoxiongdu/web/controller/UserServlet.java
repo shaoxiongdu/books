@@ -42,20 +42,21 @@ public class UserServlet extends BaseServlet {
 
         if(!token.equalsIgnoreCase(verificationCode)){
             req.setAttribute("message","验证码错误,重试呐!");
-            req.getRequestDispatcher("/pages/user/regist.jsp").forward(req,resp);
+            req.getRequestDispatcher("/pages/user/login.jsp").forward(req,resp);
         }
 
         if (userService.existAccount(user.getAccount())) {
             req.setAttribute("message","用户名已存在!");
             req.setAttribute("account",user.getAccount());
             req.setAttribute("email",user.getEmail());
-            req.getRequestDispatcher("/pages/user/regist.jsp").forward(req,resp);
+            req.getRequestDispatcher("/pages/user/login.jsp").forward(req,resp);
         }
 
         int insert = userService.insert(user);
 
         if(insert > 0){
             req.getSession().setAttribute("loginUser",userService.QueryByAccountAndPassword(new User(0,user.getAccount(),user.getPassword(),null)));
+            req.setAttribute("page",bookService.page(1,16));
             req.getRequestDispatcher("/pages/client/index.jsp").forward(req,resp);
         }
 
@@ -82,7 +83,7 @@ public class UserServlet extends BaseServlet {
             resp.addCookie(new Cookie("account",loginUser.getAccount()));
             //保存当前登录用户的信息到绘画作用域
             req.getSession().setAttribute("loginUser",loginUser);
-            req.setAttribute("page",bookService.page(1,18));
+            req.setAttribute("page",bookService.page(1,16));
             req.getRequestDispatcher("/pages/client/index.jsp").forward(req,resp);
         }
     }

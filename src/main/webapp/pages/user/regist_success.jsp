@@ -26,14 +26,14 @@
 				<div>
 					<span>欢迎<span class="um_span"> ${sessionScope.get("loginUser").account}</span>登录 维信书城</span>
 					<a href="pages/order/order.jsp">我的订单</a>
-					<a href="index.html">注销</a>&nbsp;&nbsp;
-					<a href="index.html">返回</a>
+					<a href="login.jsp">注销</a>&nbsp;&nbsp;
+					<a href="login.jsp">返回</a>
 				</div>
 		</div>
 		
 		<div id="main">
 		
-			<h1>注册成功! <a href="index.html">转到主页</a></h1>
+			<h1>注册成功! <a href="login.jsp">转到主页</a></h1>
 	
 		</div>
 

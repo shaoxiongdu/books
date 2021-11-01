@@ -24,14 +24,14 @@ public class ClientServlet extends BaseServlet{
 
     public void index(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 
-        req.setAttribute("page",bookService.page(1,18));
+        req.setAttribute("page",bookService.page(1,16));
 
         req.getRequestDispatcher("/pages/client/index.jsp").forward(req,resp);
     }
 
     public void page(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 
-        Integer pageSize = FormatUtils.string2Integer(req.getParameter("pageSize"),18);
+        Integer pageSize = FormatUtils.string2Integer(req.getParameter("pageSize"),16);
         Integer pageNo = FormatUtils.string2Integer(req.getParameter("pageNo"),1);
 
         Page<Book> page = bookService.page(pageNo,pageSize);

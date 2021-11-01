@@ -36,7 +36,7 @@ public class BookServlet extends BaseServlet{
 
     public void page(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 
-        Integer pageSize = FormatUtils.string2Integer(req.getParameter("pageSize"),5);
+        Integer pageSize = FormatUtils.string2Integer(req.getParameter("pageSize"),16);
         Integer pageNo = FormatUtils.string2Integer(req.getParameter("pageNo"),1);
 
         Page<Book> page = bookService.page(pageNo,pageSize);

@@ -12,7 +12,7 @@
 </head>
 <body>
 <div id="header">
-    <img class="logo_img" alt="" src="static/img/weixin.png" >
+    <a href="admin"><img class="logo_img" alt="" src="static/img/weixin.png" ></a>
     <span class="wel_word">网上书城</span>
     <div>
 

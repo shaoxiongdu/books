@@ -7,7 +7,7 @@
 		<%--静态导入--%>
 		<%@ include file="/pages/common/head.jsp"%>
 
-		<script type="text/javascript" src="static/script/jquery-1.7.2.js"></script>
+		<script type="text/javascript" src="static/js/jquery-1.7.2.js"></script>
 		<script type="text/javascript">
 			// 页面加载完成之后
 			$(function () {
@@ -43,7 +43,7 @@
 					//1 获取确认密码内容
 					var repwdText = $("#repwd").val();
 					//2 和密码相比较
-					if (repwdText != passwordText) {
+					if (repwdText !== passwordText) {
 						//3 提示用户
 						$("span.errorMsg").text("确认密码和密码不一致！");
 
@@ -71,7 +71,7 @@
 					codeText = $.trim(codeText);
 					// alert("去空格后：["+codeText+"]")
 
-					if (codeText == null || codeText == "") {
+					if (codeText == null || codeText === "") {
 						//4 提示用户
 						$("span.errorMsg").text("验证码不能为空！");
 

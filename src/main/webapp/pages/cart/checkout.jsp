@@ -15,7 +15,7 @@
 		margin-top: 50px;
 	}
 	span{
-		color: orange;
+		color: red;
 	}
 </style>
 </head>

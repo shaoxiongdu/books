@@ -21,7 +21,7 @@ div{
 }
 
 #main {
-	height: 600px;
+	height: 700px;
 	width: 1500px;
 	border: 1px black solid;
 	overflow: auto;
@@ -39,7 +39,7 @@ div{
 }
 
 .b_list{
-	height: 280px;
+	height: 320px;
 	width:150px;
 	margin: 10px;
 	background-color: #eeeeee;
@@ -274,7 +274,7 @@ h1 {
 }
 
 #header div span {
-	margin: 10px;
+	margin-left: 20px;
 }
 
 #header div .um_span{
