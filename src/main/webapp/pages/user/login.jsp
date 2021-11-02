@@ -24,7 +24,7 @@
 					<div class="login_form">
 						<div class="login_box" style="height: 500px">
 							<div class="tit">
-								<h1>维信书库后台管理系统</h1>
+								<h1>维信书城v1.0</h1>
 								<a href="pages/user/regist.jsp">立即注册</a>
 							</div>
 							<div class="msg_cont">

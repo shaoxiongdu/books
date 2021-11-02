@@ -42,14 +42,14 @@ public class UserServlet extends BaseServlet {
 
         if(!token.equalsIgnoreCase(verificationCode)){
             req.setAttribute("message","验证码错误,重试呐!");
-            req.getRequestDispatcher("/pages/user/login.jsp").forward(req,resp);
+            req.getRequestDispatcher("/pages/user/regist.jsp").forward(req,resp);
         }
 
         if (userService.existAccount(user.getAccount())) {
             req.setAttribute("message","用户名已存在!");
             req.setAttribute("account",user.getAccount());
             req.setAttribute("email",user.getEmail());
-            req.getRequestDispatcher("/pages/user/login.jsp").forward(req,resp);
+            req.getRequestDispatcher("/pages/user/regist.jsp").forward(req,resp);
         }
 
         int insert = userService.insert(user);

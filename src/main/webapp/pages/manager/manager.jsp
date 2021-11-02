@@ -16,7 +16,7 @@
 <body>
 <%@include file="/pages/manager/managerHead.jsp"%>
 <div id="main">
-		<h1>欢迎管理员 <span style="color: orange">${sessionScope.loginUser.account}</span>进入后台管理系统</h1>
+		<h1>欢迎管理员进入后台管理系统</h1>
 	</div>
 
 	<%--静态导入页脚--%>
