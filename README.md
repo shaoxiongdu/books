@@ -18,7 +18,7 @@
 
 ##  Star曲线
 
-[![Stargazers over time](https://starchart.cc/shaoxiongdu/books.svg)](https://github.com/shaoxiongdu/books)
+[![Stargazers over time](https://starchart.cc/shaoxiongdu/blog.svg)](https://github.com/shaoxiongdu/books)
 
 ## 需求分析
 
