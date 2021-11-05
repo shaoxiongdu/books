@@ -13,10 +13,9 @@
 
 <%@include file="/pages/manager/managerHead.jsp"%>
 
-
 <div id="main" style="text-align: center">
 	<h1>当前系统总计: <span style="color: red"> ${requestScope.orderList.size()}</span>笔订单</h1>
-	<table style="width: 800px">
+	<table style="width: 1485px">
 		<tr>
 			<th>订单号</th>
 			<th style="width: 500px">日期</th>

@@ -6,7 +6,7 @@ import java.util.Date;
 /**
  * 订单实体类
  */
-public class Order {
+public class Order{
 
     private String orderId;
     private Date createTime;
@@ -76,4 +76,5 @@ public class Order {
                 ", userId=" + userId +
                 '}';
     }
+
 }

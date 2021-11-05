@@ -43,8 +43,7 @@ public class CartServlet extends BaseServlet{
 
         System.out.println(cart);
         req.getSession().setAttribute("lastName",book.getName());
-        req.setAttribute("page",bookService.page(1,18));
-        req.setAttribute("message","图书【" + book.getName() + "】成功添加到购物车!");
+        req.setAttribute("page",bookService.page(1,16));
         req.getRequestDispatcher("/pages/client/index.jsp").forward(req,resp);
     }
 

@@ -46,7 +46,7 @@ public class OrderDaoImpl implements OrderDao {
      */
     @Override
     public List<Order> queryOrders() {
-        String sql = "SELECT order_id orderId,create_time createTime,price,status,user_id userId FROM `order`";
+        String sql = "SELECT order_id orderId,create_time createTime,price,status,user_id userId FROM `order` ORDER BY create_time DESC";
         try {
             List<Order> query = queryRunner.query(connection,sql, new BeanListHandler<>(Order.class));
             return query;

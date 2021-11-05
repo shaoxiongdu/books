@@ -14,6 +14,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.util.List;
+import java.util.TreeSet;
 
 /**
  * @description:
@@ -62,6 +63,7 @@ public class OrderServlet extends BaseServlet{
      */
     public void showAllOrders(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         List<Order> orders = orderService.showAllOrders();
+
         req.setAttribute("orderList",orders);
         req.getRequestDispatcher("/pages/manager/order_manager.jsp").forward(req,resp);
     }
